@@ -72,9 +72,25 @@ def delete_student(student_id: int, function_name: str):
 
 
 @router.post("/students")
-def create_student():
+def create_student(id,name,role,subjects,email,picture):
+    new_student={
+        "id": new_id,
+        "name": new_name,
+        "role": role,
+        "subjects": subjects,
+        "email": email,
+        "picture": picture
+    }
+    for student in students:
+        if students["id"] == new_student["id"] or students["name"] == new_student["name"] or students["email"] == new_student["email"]:
+            return "Error: Student already exists"
+        else:
+            students.append(new_student)
+            return True
+
     pass
 
 @router.put("/students/{student_id}")
 def edit_student(student_id):
+
     pass

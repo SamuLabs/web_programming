@@ -3,21 +3,7 @@ import random
 import unittest
 
 class TestStudents(unittest.TestCase):
-    """
-    def test_get_students(self):
-        students = get_students()
-        self.assertIsNotNone(students)
-
-    def test_get_student_not_exist(self):
-        student_id = 4
-        student = get_student(student_id)
-        self.assertIsNone(student)
     
-    def test_get_student_exist(self):
-        student_id = 1
-        student = get_student(student_id)
-        self.assertIsNotNone(student)
-    """
     def test_delete_student_not_exist(self):
         student_id = 4
         student = delete_student(student_id, "test_delete_student_not_exist")
@@ -39,20 +25,28 @@ class TestStudents(unittest.TestCase):
         students = get_students()
         self.assertIsNone(students)
 
-    """
-    def test_delete_student_empty_database(self):
-        student_id = 1
-        student = delete_student(student_id)
-        self.assertEqual(student, "Empty student's database")
-
-    def test_get_students_id(self):
-        ids = get_students_id()
-        self.assertIsNotNone(ids)
-    """
-
     # CREATE
     # Caso 1: True cuando usuario es creado
+    def test_create_student(self):
+        student_id = create_student(
+            4,
+            "Pollo Loco",
+            "senpai_kohai",
+            ["Programación Web", "Programación Python", "QA"],
+            "ricopollito@hotmail.com",
+            "")
+        self.assertTrue(student_id)
+    
     # Caso 2: False cuando usuario (email) ya existe
+    def test_create_student(self):
+        student_id = create_student(
+            5,
+            "Pollo Loco",
+            "senpai_kohai",
+            ["Programación Web", "Programación Python", "QA"],
+            "nesnava94@hotmail.com",
+            "")
+        self.assertEqual(student_id, "Error: Student already exists")
 
     # PUT
     # Caso 1: True cuando usuario fue actualizado y existe
