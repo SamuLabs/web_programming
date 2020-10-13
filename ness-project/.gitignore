@@ -1,0 +1,8 @@
+__pycache__/
+*~
+.*env
+venv/
+*.pyc
+.cache
+.pytest_cache
+env_override_existing_values = 1

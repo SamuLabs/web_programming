@@ -3,11 +3,11 @@ import random
 import unittest
 
 class TestStudents(unittest.TestCase):
-    """
     def test_get_students(self):
         students = get_students()
         self.assertIsNotNone(students)
 
+    """
     def test_get_student_not_exist(self):
         student_id = 4
         student = get_student(student_id)
@@ -17,7 +17,6 @@ class TestStudents(unittest.TestCase):
         student_id = 1
         student = get_student(student_id)
         self.assertIsNotNone(student)
-    """
     def test_delete_student_not_exist(self):
         student_id = 4
         student = delete_student(student_id, "test_delete_student_not_exist")
@@ -39,7 +38,6 @@ class TestStudents(unittest.TestCase):
         students = get_students()
         self.assertIsNone(students)
 
-    """
     def test_delete_student_empty_database(self):
         student_id = 1
         student = delete_student(student_id)

@@ -1,5 +1,6 @@
 from fastapi import APIRouter
 
+
 router = APIRouter()
 
 students = [
@@ -39,6 +40,7 @@ Crear endpoints:
     Delete      /students/<student_id>  DELETE
 """
 @router.get("/students")
+#Consumir tabla de estudiantes
 def get_students():
     if not students:
         return None
