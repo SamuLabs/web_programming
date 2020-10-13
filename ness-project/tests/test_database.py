@@ -1,5 +1,4 @@
 import mysql.connector
-import random
 import unittest
 import os
 
