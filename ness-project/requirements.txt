@@ -4,12 +4,14 @@ cffi==1.14.3
 fastapi==0.61.1
 iniconfig==1.0.1
 mysql-connector==2.2.9
+mysqlclient==2.0.1
 packaging==20.4
 passlib==1.7.4
 pluggy==0.13.1
 py==1.9.0
 pycparser==2.20
 pydantic==1.6.1
+PyMySQL==0.10.1
 pyparsing==2.4.7
 pytest==6.1.0
 pytest-dotenv==0.5.2
